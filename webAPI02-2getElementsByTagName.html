@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>getElementsByTagName</title>
+		<script type="text/javascript">
+			var divs = document.getElementsByTagName('div');//getElementsByTagName的获取的集合是动态的
+			console.log(divs.length);//0
+		</script>
+	</head>
+	<body>
+		<div id="main">还哦不V家并不觉得呼呼</div>
+		<div>不好吧不符是吧</div>
+		<!--<p>我还不会死的Hi好黄飞鸿</p>-->
+		<span>好好地发很厉害了</span>
+		<div>哈哈哈哈多小时</div>
+		
+		<script type="text/javascript">
+			console.log(divs.length);//3
+			
+			
+			//get 获取 Elements 元素 By 通过 Tag 标签、标识 Name名字
+			
+			var divs = document.getElementsByTagName('div'); 
+			//HTMLCollection  Collection是集合的意思  伪数组 有length,有索引, HTMLCollection(3) [div#main, div, div, main: div#main]
+			console.log(divs);//divs中的每一个HTMLDivElement是类型
+			
+			var ps = document.getElementsByTagName('p');
+			console.log(ps);//HTMLCollection [],是一个空的集合
+			
+			
+		</script>
+	</body>
+</html>

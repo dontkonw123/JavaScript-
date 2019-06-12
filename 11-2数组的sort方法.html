@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr = [42,200,98,16];
+			arr.sort();
+			console.log(arr);//排序并不是按照数字的从小到大或者是从大到小排的，是按照每个数字的首位数字在ASCII码表里面的大小进行排序的
+			
+			
+			arr.sort(function (a,b){
+				return a - b;
+			});
+			console.log(arr);
+			
+			
+			
+			
+			var ayy = ['hah','ja','kakk','loaoooa','p']
+			ayy.sort(function(a,b){
+				return a.length - b.length;
+			});
+			console.log(ayy);
+		</script>
+	</body>
+</html>

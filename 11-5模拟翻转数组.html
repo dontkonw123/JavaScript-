@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>模拟翻转数组</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var array = ['a','c','hahh','xixi','lalla'];
+			
+			//可以直接通过调用reverse翻转数组
+//			array.reverse();
+//			console.log(array);
+			console.log(array.length);
+
+			//也可以通过for循环翻转数组
+			
+			for( var i = 0; i < array.length-1; i++){
+							array[i] = array[array.length-i-1];
+						}
+			console.log(array);
+			
+
+			
+		</script>
+	</body>
+</html>

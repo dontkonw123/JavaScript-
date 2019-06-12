@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>基本包装类型</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//由于简单类型没有属性和方法，有时为了方便会将基本类型转化为基本包装类型，因为转化为对象才有属性和方法
+			var s1 = 'abc';
+			var len = s1.length;
+			console.log(len);
+			
+			
+			//第11行s1.length命令，会把基本类型转变成基本包装类型，会创建一个对应的临时对象，计算机内部执行的步骤是
+			var _s1 = new String('abc');
+			var len = _s1.length;
+			_s1 = null;//销毁对象
+			
+			
+			//基本包装类型：把基本类型包装成复杂类型，基本包装类型包括三种：String\Number\Boolean
+			var s = new String('123abc');
+			console.log(s);
+			console.log(s1);
+			
+			
+			
+			//将来一般情况下，不会使用Number、Boolean基本包装类型，因为会引起一定程度的歧义
+			var n1 = new Number('18');//创建一个PrimitiveValue(初始值)是18的对象
+			var n2 = Number('18');//类型转化，将内容为18的字符串，转化成数值类型
+			
+			console.log(n1);
+			console.log(n2);
+			
+			
+			
+			var b1 = new Boolean(false);
+			//创建一个PrimitiveValue(初始值)是false的对象；
+			
+			var b2 = Boolean('abc');
+			//将内容为abc的字符串转化为布尔类型，由于转换成false的五种情况分别为：0,'',null,NaN,Undefined
+			//所以b2的值是true
+			
+			var b3 = b1 && true;
+			//所以运算结果为true 
+			
+			
+			
+		</script>
+	</body>
+</html>

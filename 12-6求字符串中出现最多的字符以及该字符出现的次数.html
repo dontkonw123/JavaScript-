@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>求字符串中出现最多的字符以及该字符出现的次数</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//找一个字符串中出现最多的元素以及其出现的次数
+			//1.统计每一个字符出现的次数
+			//2.求最大值
+			var s= 'aedeedededoekjpelepnme'
+			
+			var ch;//记录出现最多的字符
+			var num;//记录字符出现的次数
+			var o = {};//创建一个对象，记录字符串中每一个字符出现的次数
+			
+			for(var i =0;i < s.length; i++){
+				var item = s.charAt(i);
+				if(o[item]){
+					//对象中已有该属性，+1
+					o[item]++;
+				}else{
+					//对象中没有该属性
+					o[item] = 1;
+				}
+				
+			}
+			console.log(o);//打印结果为Object
+//							a: 1
+//							d: 4
+//							e: 9
+//							j: 1
+//							k: 1
+//							l: 1
+//							m: 1
+//							n: 1
+//							o: 1
+//							p: 2
+
+
+			//接着要求最大值并找到出现次数最多的元素，假设最大值是1
+			
+			num = 1;
+			for(var key in o){
+				if(num < o[key]){
+					num = o[key];
+					ch = key;
+				}
+			}
+			console.log(num);
+			console.log(ch);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>非表单元素的属性</title>
+	</head>
+	<body>
+		<a id="e360" href="https://hao.360.com/?src=lm&ls=n5b5cf0f09d" title="360导航,新一代安全上网导航">360</a>
+		<br /><br />
+		<img id="aq" src="img/a.jpg" alt="大话西游"/>
+		
+		
+		<script type="text/javascript">
+			var e360 = document.getElementById('e360');
+			var aq = document.getElementById('aq');
+			
+			console.log(e360.id);
+			console.log(e360.href);
+			console.log(e360.title);
+			
+			
+			e360.href = 'https://www.jianshu.com/';
+			console.log(e360.href);
+			
+			
+			console.log(aq.id);
+			console.log(aq.src);
+			console.log(aq.alt);
+			
+		</script>
+	</body>
+</html>

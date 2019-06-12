@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>字符串的方法介绍</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			
+		//1.字符方法
+		
+			var s = 'avbfgfhf';
+
+			//charAt();获取指定位置处的字符   所有浏览器支持
+			console.log(s.charAt(0));
+			for(var i = 0;i < s.length;i++){
+				console.log(s.charAt(i));
+			}
+			
+			//charCodeAt();获取指定位置处字符对应的ASCII码
+			console.log(s.charCodeAt(0));
+			
+			//str[0]; 获取指定位置处的字符  html5、IE8+支持
+			for(var i = 0; i < s.length; i++){
+				console.log(s[i]);
+			}
+		//2.字符串操作方法
+		
+			//concat()         拼接字符串，等效于+，+更常用
+			//slice()          从start位置开始，截取到end位置，end取不到
+			//substring()      从start位置开始，截取到end位置，end取不到
+			//substr()         从start位置开始，截取length个字符
+			//截取字符串'我爱中华人民共和国'中的'中华'
+			
+			var w = '我爱中华人民共和国';
+			
+			var newStr = w.substr(2,2);
+//			substr的第一个参数是截取开始的位置，第二个参数截取的长度
+			console.log(newStr);
+
+			
+			
+			
+		//3.位置方法
+		
+			//indexOf()        返回指定内容在原字符串中的位置，当查找不到的时候返回-1
+			
+			//查找字符串'aoecordolfodfrpo'中所有o出现的位置
+			
+			var st = 'aoecordolfodfrpo';
+			var q = -1;
+			do{
+				var q = st.indexOf('o',q+1);
+				if(q !== -1){
+					console.log(q);
+				}
+			}while(q !== -1);
+			
+			
+			
+			//lastIndexOf()    从后往前找，只找第一个匹配的
+		
+		//4.去除空白
+		
+			//trim()          只能去除字符串前后的空白
+			
+			//把字符串'     avb      xyz    a    123    '中的所有空白去掉
+			 var m ='     avb      xyz    a    123    '; 
+			 m = m.trim();
+			 console.log(m);//只能把前后的空白去掉
+			
+			
+		//5.大小写转换方法
+		
+			//to(Locale)UpperCase()    转换大写（Locale可写可不写）
+			//to(Locale)LowerCase()    转换小写（Locale可写可不写）
+		//6. 其他
+		
+			//search()
+			//replace()
+			
+			//把字符串'aoecordolfodfrpo'中所有o替换成！ 
+			var st = 'aoecordolfodfrpo';
+			var q = -1;
+			do{
+				var q = st.indexOf('o',q+1);
+				if(q !== -1){
+					st = st.replace('o','!');
+				}
+			}while(q !== -1);
+			console.log(st);
+
+			
+			
+			//split()
+			//把字符串'     avb      xyz    a    123    '中的所有空白去掉 
+			var stri = '     avb      xyz    a    123    ';
+			var ar = stri.split('');
+			console.log(ar)
+			console.log(ar.join(''));//???????????????????????输出的结果为     avb      xyz    a    123  ，没有去掉任何一个空白
+		</script>
+	</body>
+</html>

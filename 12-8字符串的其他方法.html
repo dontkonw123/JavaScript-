@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>字符串的其他方法</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//concat 拼接字符串
+			var a = '123';
+			var b = 'abc';
+			console.log(a.concat(b));
+			//转换大小写
+			var str = 'abCDeF';
+			
+				//转换成小写
+				console.log(str.toLowerCase());
+				console.log(str.toLocaleLowerCase());
+				//转换成大写
+				console.log(str.toUpperCase());
+				console.log(str.toLocaleUpperCase());
+				
+			//search()  查找 比indexOf()强大，search()支持正则表达式
+			var a = 'fhdhadsdsf'
+			console.log(a.search('ha'));//打印结果是'ha'中第一个元素的索引值3
+			console.log(a.search('ma'));//打印结果是-1,因为找不到该元素
+		</script>
+	</body>
+</html>

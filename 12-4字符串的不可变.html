@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>字符串的不可变</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//字符串的不可变
+			var s = 'aa';
+			s = 'bbb';
+			//当拼接大量字符串时，会有性能问题
+			
+			var b = '';
+			for(var i = 0; i < 1000000;i++){
+				b += i;
+			}
+			console.log(b);
+		</script>
+	</body>
+</html>

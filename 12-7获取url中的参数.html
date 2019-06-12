@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获取url中的参数</title>
+	</head>
+	<body>
+		<script>
+			//获取url中?后面的内容
+			//例如：https://hao.360.com/?src=lm&ls=n5b5cf0f09d
+			var url = 'https://hao.360.com/?src=lm&ls=n5b5cf0f09d';
+			function getParams(url){
+				//获取?后面第一个字符的索引
+				var index = url.indexOf('?') + 1;
+				//获取url中?后面的字符串
+				var params = url.substr(index);
+				
+				var mo = params.split('&');//使用&切割字符串，返回一个数组['src=lm','ls=n5b5cf0f09d']
+				
+				
+				var o = {};//数组中每一项的样子 key = value
+				
+				for(var i = 0; i < mo.length; i++){
+					var tmpArr = mo[i].split('=');
+					var key = tmpArr[0];
+					var value = tmpArr[1];
+					o[key] = value;
+				}
+				return o;
+			}
+			var obj = getParams(url);
+			console.log(obj);
+			console.log(obj.src);
+		</script>
+	</body>
+</html>

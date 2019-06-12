@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>清空数组的方法</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var array = [1,2,3,4];
+			//清空数组
+			//1.
+			array = [];
+			console.log(array);
+			
+			var array = [1,2,3,4];
+			//2.
+			array.length = 0;
+			console.log(array);
+			
+			var array = [1,2,3,4];
+			//3.
+			//第一个参数======从第几个元素开始删除
+			//第二个参数======删除多少个元素 
+			array.splice(0,array.length);
+			console.log(array);
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册事件(案例：点击按钮切换图片)</title>
+	</head>
+	<body>
+		<button id="btn" value="点我 ">点我</button><br /><br />
+		<img src="img/b.jpg" id="pic" width="375" height="667"/>
+		<script type="text/javascript">
+			//事件：当...时候，做什么事情   触发--->响应
+			
+			//1.获取按钮
+			
+			var btn = document.getElementById('btn');
+			var pic = document.getElementById('pic');
+			
+			
+			var flag = 2; //当flag的值是2的时候，出现图片b,当flag值为1时，出现图片a
+			
+			//2.给按钮注册事件
+			
+			//事件名称：click
+			//事件源：谁触发的事件
+			//事件处理函数：
+			
+			
+			
+			btn.onclick = function(){
+				if(flag === 1){
+					pic.src = 'img/b.jpg';
+					flag = 2;	
+				}else if(flag === 2){
+					pic.src = 'img/a.jpg';
+					flag = 1;	
+				}
+
+			}
+		</script>
+	</body>
+</html>

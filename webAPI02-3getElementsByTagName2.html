@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>getElementsByTagName2</title>
+	</head>
+	<body>
+		<div id="container">
+			<div>1454888</div>
+			<div>789545658</div>
+			<p>kkkkkkk</p>
+			<span>lkiiii</span>
+		</div>
+		<div>hello</div>
+		<div id='main'>world</div>
+		<div>heima</div>
+		<p>heihei</p>
+		<span>4569998</span>
+		
+		
+		
+		<!--找到id为container里的div-->
+		<script type="text/javascript">
+			var container = document.getElementById('container');
+			var divs = container.getElementsByTagName('div');
+			console.log(divs);
+		</script>
+	</body>
+</html>

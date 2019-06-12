@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获取元素的其他方式</title>
+	</head>
+	
+	<body>
+		<div class="main">比较长值班了电话号</div>
+		<div id="main">那就爱你哟</div>
+		<div name='main'>不能急快了吧大V汇率</div>
+		<div class="a">hahha</div>
+		<div class="a">kajjkhh</div>
+		<p class="a">lajivdj</p>
+		
+		<script type="text/javascript">
+			//通过标签的name属性获取元素
+			var divs = document.getElementsByName('main');
+			console.log(divs);
+			
+			//根据class属性来获取元素
+			var divc = document.getElementsByClassName('main');
+			console.log(divc);
+			
+			
+			//根据选择器来查看元素
+			//query 查询
+			//Selector 选择器
+			//querySelector只能获取一个元素
+			var main = document.querySelector('#main');
+			console.log(main);
+			
+			
+			//querySelectorAll 返回所有匹配到的元素
+			var elements = document.querySelectorAll('.a');
+			console.log(elements);
+			
+			
+			//querySelector和querySelectorAll都存在浏览器兼容问题，支持TE8以后的浏览器，多用于移动端
+			
+			
+		</script>
+		
+		
+		
+	</body>
+</html>
